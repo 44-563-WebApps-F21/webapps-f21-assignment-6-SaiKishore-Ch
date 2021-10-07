@@ -2,24 +2,7 @@
 <html>
  <head>
      <title>Java Script and DOM</title>
-     <script>
-        var correct = 0, wrong = 0;
-        function processPhrase() {
-
-            secretphrase = document.getElementById("secretphrase").value
-            checkphrase = document.getElementById("checkphrase").value
-            if (secretphrase == checkphrase) {
-                correct = correct + 1;
-                document.getElementById("result").innerHTML = "Correct count " + correct;
-                alert("access allowed");
-            } else {
-
-                wrong = wrong + 1;
-                document.getElementById("result").innerHTML = "Wrong count " + wrong;
-                alert("access denied");
-            }
-        }
-    </script>
+     
 </head>
 <body>
 <h1>Pass phrase by Sai Kishore Chowdam</h1>
@@ -32,6 +15,24 @@
     <br>
     <input type="button" onclick="processPhrase()" value="Check the phrase">
 </form>
+<script>
+    var correct = 0, wrong = 0;
+    function processPhrase() {
+
+        secretphrase = document.getElementById("secretphrase").value
+        checkphrase = document.getElementById("checkphrase").value
+        if (secretphrase == checkphrase) {
+            correct = correct + 1;
+            document.getElementById("result").innerHTML = "Correct count " + correct;
+            alert("access allowed");
+        } else {
+
+            wrong = wrong + 1;
+            document.getElementById("result").innerHTML = "Wrong count " + wrong;
+            alert("access denied");
+        }
+    }
+</script>
 
 <p id="result">Attempts display here </p>
 
